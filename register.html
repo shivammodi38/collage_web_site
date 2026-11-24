@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechQuest 2027 | Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="TechQuest.png"
+             alt="TechQuest 2027 Logo"
+             class="fest-logo">
+
+        <h1>Event Registration</h1>
+        <p>Register. Participate. Achieve.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="register.html" aria-current="page">Register</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Register for TechQuest 2027</h2>
+
+            <p>
+                Take the first step towards an exciting journey
+                of technology, innovation and creativity.
+                Fill in your details and select the events
+                you wish to participate in.
+            </p>
+
+            <p>
+                <strong>Festival Dates:</strong>
+                12 - 14 February 2027
+            </p>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+
+            <form id="registrationForm">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+
+                    <input type="text"
+                           id="fullname"
+                           name="fullname"
+                           placeholder="Enter your full name"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email address"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           placeholder="Enter your 10-digit phone number"
+                           pattern="[0-9]{10}"
+                           maxlength="10"
+                           inputmode="numeric"
+                           title="Enter a valid 10-digit phone number"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+
+                    <select id="department"
+                            name="department"
+                            required>
+
+                        <option value="">Select your department</option>
+                        <option value="cse">Computer Science Engineering</option>
+                        <option value="aiml">Artificial Intelligence & Machine Learning</option>
+                        <option value="it">Information Technology</option>
+                        <option value="ece">Electronics & Communication</option>
+                        <option value="ee">Electrical Engineering</option>
+                        <option value="me">Mechanical Engineering</option>
+                        <option value="ce">Civil Engineering</option>
+                        <option value="other">Other</option>
+
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Year of Study</legend>
+
+                    <label>
+                        <input type="radio"
+                               name="year"
+                               value="1"
+                               required>
+                        First Year
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="year"
+                               value="2">
+                        Second Year
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="year"
+                               value="3">
+                        Third Year
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="year"
+                               value="4">
+                        Fourth Year
+                    </label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Select Your Events</legend>
+
+                    <label>
+                        <input type="checkbox"
+                               name="events"
+                               value="Code Clash">
+                        Code Clash - ₹100
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="events"
+                               value="Robo Race">
+                        Robo Race - ₹200
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="events"
+                               value="Hackathon">
+                        Hackathon - ₹300
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="events"
+                               value="UI/UX Challenge">
+                        UI/UX Challenge - ₹150
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="events"
+                               value="Tech Quiz">
+                        Tech Quiz - ₹50
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="events"
+                               value="Prompt War">
+                        Prompt War - ₹50
+                    </label>
+
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="message">
+                        Additional Message (Optional)
+                    </label>
+
+                    <textarea id="message"
+                              name="message"
+                              rows="5"
+                              placeholder="Enter any questions or special requirements..."></textarea>
+                </div>
+
+                <label>
+                    <input type="checkbox"
+                           name="agreement"
+                           required>
+
+                    I agree to follow the rules and regulations
+                    of TechQuest 2027.
+                </label>
+
+                <div class="form-buttons">
+
+                    <button type="submit">
+                        Submit Registration
+                    </button>
+
+                    <button type="reset">
+                        Clear Form
+                    </button>
+
+                </div>
+
+                <p id="formStatus" role="status"></p>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Registration Guidelines</h2>
+
+            <ul>
+                <li>Enter valid personal and contact details.</li>
+
+                <li>Select at least one event to participate in.</li>
+
+                <li>You can register for multiple events.</li>
+
+                <li>Check the event schedule before registering.</li>
+
+                <li>Carry your valid college identity card.</li>
+
+                <li>Follow all festival rules and regulations.</li>
+            </ul>
+
+            <a href="event.html">Explore Events</a>
+            <a href="schedule.html">View Schedule</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2027 TechQuest Organizing Committee.
+            All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+
+        const form = document.getElementById("registrationForm");
+        const status = document.getElementById("formStatus");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("fullname").value.trim();
+
+            const selectedEvents = document.querySelectorAll(
+                'input[name="events"]:checked'
+            );
+
+            if (name === "") {
+                status.style.color = "#dc2626";
+                status.textContent = "Please enter your full name.";
+                return;
+            }
+
+            if (selectedEvents.length === 0) {
+                status.style.color = "#dc2626";
+                status.textContent = "Please select at least one event.";
+                return;
+            }
+
+            status.style.color = "#15803d";
+
+            status.textContent =
+                "Thank you, " + name +
+                "! Your registration form has been validated successfully.";
+
+        });
+
+        form.addEventListener("reset", function() {
+            status.textContent = "";
+        });
+
+    </script>
+
+</body>
+</html>

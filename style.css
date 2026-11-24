@@ -1,0 +1,957 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+:root {
+    --white: #ffffff;
+    --blue: #0369a1;
+    --dark-blue: #0c4a6e;
+    --sky-blue: #38bdf8;
+    --text: #16334b;
+    --muted: #64748b;
+    --border: #dbeaf3;
+    --light-blue: #e0f2fe;
+    --gradient: linear-gradient(135deg, #0369a1, #0284c7);
+    --shadow: 0 5px 25px rgba(12, 74, 110, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(145deg, #e0f2fe 0%, #ffffff 55%, #f0f9ff 100%);
+    color: var(--text);
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--sky-blue);
+    outline-offset: 3px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(120deg, #bae6fd 0%, #e0f2fe 50%, #ffffff 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+header .fest-logo {
+    display: block;
+    width: 380px;
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    animation: logoEntrance 0.7s ease-out;
+}
+
+header h1 {
+    color: var(--dark-blue);
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: var(--muted);
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--dark-blue);
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--light-blue);
+    color: var(--blue);
+}
+
+nav a.active,
+nav a[aria-current="page"] {
+    background: var(--gradient);
+    color: var(--white);
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    flex: 1;
+    animation: pageEntrance 0.6s ease-out;
+}
+
+section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 35px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    color: var(--blue);
+    font-size: clamp(25px, 4vw, 34px);
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+section h3 {
+    color: var(--dark-blue);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+section p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+section strong {
+    color: var(--dark-blue);
+}
+
+section ul,
+section ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+section li {
+    margin-bottom: 10px;
+    color: var(--muted);
+}
+
+section li::marker {
+    color: var(--blue);
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 35px;
+    background: linear-gradient(135deg, #bae6fd, #e0f2fe, #ffffff);
+}
+
+.hero h1 {
+    color: var(--dark-blue);
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+}
+
+.hero h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 15px auto 25px;
+    font-size: 16px;
+}
+
+.hero img,
+section > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin: 20px auto;
+}
+
+.btn,
+.button,
+.btn-primary,
+.btn-secondary,
+main section > a[href="register.html"],
+main section > a[href="event.html"],
+main section > a[href="events.html"],
+main section > a[href="schedule.html"],
+main a[download] {
+    display: inline-block;
+    background: var(--gradient);
+    color: var(--white);
+    padding: 13px 25px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 6px 8px 6px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-secondary,
+main section > a[href="event.html"],
+main section > a[href="events.html"],
+main section > a[href="schedule.html"] {
+    background: var(--light-blue);
+    color: var(--blue);
+    border: 1px solid #bae6fd;
+}
+
+main a[download] {
+    background: var(--gradient);
+    color: var(--white);
+}
+
+video,
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    border: none;
+    border-radius: 16px;
+    margin: 20px auto;
+    background: var(--dark-blue);
+}
+
+video {
+    height: auto;
+}
+
+iframe {
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+audio {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.event-grid,
+.events-grid,
+.event-cards,
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.event-card,
+.contact-card {
+    min-width: 0;
+    background: #f8fcff;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--sky-blue);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    overflow-wrap: anywhere;
+}
+
+.event-card h3,
+.contact-card h3 {
+    color: var(--dark-blue);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.event-card p:last-child {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.event-card p:last-child strong {
+    color: var(--blue);
+}
+
+.event-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.table-container,
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 15px 0;
+    font-size: 14px;
+    background: var(--white);
+}
+
+th {
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 600;
+    padding: 17px;
+    text-align: center;
+}
+
+td {
+    padding: 17px;
+    text-align: center;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+
+td:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background: #f0f9ff;
+}
+
+td[rowspan] {
+    background: #e0f2fe;
+    color: var(--dark-blue);
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+th[colspan] {
+    background: var(--dark-blue);
+    color: var(--white);
+    font-size: 18px;
+    padding: 20px;
+}
+
+td[colspan] {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+    font-weight: 600;
+    padding: 18px;
+}
+
+caption {
+    font-family: 'Outfit', sans-serif;
+    color: var(--dark-blue);
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+form {
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+#registrationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    display: block;
+    color: var(--dark-blue);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    background: #f8fcff;
+    border: 1px solid #cce8f8;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--blue);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.08);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #78869a;
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    border: 1px solid #cce8f8;
+    border-radius: 15px;
+    padding: 22px;
+    margin: 8px 0;
+}
+
+legend {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+#registrationForm fieldset:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+#registrationForm fieldset:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+#registrationForm fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    margin: 0;
+    background: #f8fcff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--blue);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#registrationForm fieldset label:has(input:checked) {
+    background: var(--light-blue);
+    border-color: var(--blue);
+    color: var(--blue);
+}
+nav a[href="register.html"] {
+    background: linear-gradient(135deg, #0369a1, #0284c7);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(2, 132, 199, 0.25);
+}
+
+nav a[href="register.html"]:hover {
+    background: #075985;
+    color: white;
+}
+
+
+#registrationForm > label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    flex: 1;
+    padding: 15px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background: var(--gradient);
+    color: var(--white);
+    border: none;
+}
+
+button[type="reset"] {
+    background: var(--light-blue);
+    color: var(--blue);
+    border: 1px solid #bae6fd;
+}
+
+#formStatus {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+#formStatus:empty {
+    display: none;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.contact-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-card strong {
+    color: var(--dark-blue);
+}
+
+.contact-grid .contact-card a {
+    display: inline;
+    background: transparent;
+    color: var(--blue);
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+section > .contact-card {
+    background: linear-gradient(135deg, #0c4a6e, #0369a1);
+    border: none;
+    border-radius: 18px;
+    padding: 35px;
+    color: var(--white);
+}
+
+section > .contact-card h3 {
+    color: #bae6fd;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+section > .contact-card address {
+    color: var(--white);
+    font-style: normal;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+section > .contact-card p {
+    color: #e0f2fe;
+    font-size: 15px;
+}
+
+section > .contact-card strong {
+    color: var(--white);
+}
+
+section > .contact-card a {
+    display: inline;
+    background: transparent;
+    color: #bae6fd;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+details {
+    background: #f8fcff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 12px 0;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: var(--dark-blue);
+    font-size: 15px;
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "+";
+    color: var(--blue);
+    font-size: 25px;
+    font-weight: 400;
+    flex-shrink: 0;
+}
+
+details[open] {
+    background: var(--light-blue);
+    border-color: #7dd3fc;
+}
+
+details[open] summary {
+    color: var(--blue);
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+details p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+footer {
+    background: linear-gradient(135deg, #0c4a6e, #075985);
+    color: #e0f2fe;
+    text-align: center;
+    padding: 28px 20px;
+    margin-top: auto;
+    border-top: 4px solid var(--sky-blue);
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 5px 0;
+}
+
+footer a {
+    color: #bae6fd;
+}
+
+@keyframes pageEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoEntrance {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        width: 94%;
+    }
+    section {
+        padding: 28px;
+    }
+    header .fest-logo {
+        width: 320px;
+    }
+    nav ul {
+        gap: 8px;
+    }
+    nav a {
+        padding: 10px 16px;
+    }
+    .event-grid,
+    .events-grid,
+    .event-cards,
+    .events-container,
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #registrationForm fieldset:first-of-type {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 15px;
+    }
+    header .fest-logo {
+        width: 260px;
+        max-width: 90%;
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    header p {
+        font-size: 12px;
+    }
+    nav {
+        padding: 10px 6px;
+    }
+    nav ul {
+        gap: 4px;
+    }
+    nav a {
+        padding: 9px 10px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+    section {
+        padding: 20px;
+        margin-bottom: 18px;
+        border-radius: 16px;
+    }
+    section h2 {
+        font-size: 26px;
+    }
+    section h3 {
+        font-size: 20px;
+    }
+    section p {
+        font-size: 14px;
+    }
+    .hero {
+        padding: 35px 20px;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+    .event-grid,
+    .events-grid,
+    .event-cards,
+    .events-container,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .event-card,
+    .contact-card {
+        padding: 20px;
+    }
+    table {
+        min-width: 600px;
+        font-size: 13px;
+    }
+    th,
+    td {
+        padding: 12px;
+    }
+    fieldset {
+        padding: 12px;
+    }
+    #registrationForm fieldset:first-of-type {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #registrationForm fieldset label {
+        padding: 12px;
+        font-size: 13px;
+    }
+    .form-buttons {
+        flex-direction: column;
+    }
+    .form-buttons button {
+        width: 100%;
+    }
+    section > .contact-card {
+        padding: 25px;
+    }
+    section > .contact-card h3 {
+        font-size: 25px;
+    }
+    section > .contact-card address {
+        font-size: 15px;
+    }
+    details {
+        padding: 15px;
+    }
+    summary {
+        font-size: 14px;
+    }
+    footer {
+        padding: 22px 15px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+.festival-video {
+    max-width: 700px;
+    border-radius: 12px;
+}
